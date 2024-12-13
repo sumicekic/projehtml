@@ -1,0 +1,144 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.full-width-image {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Resmi üst hizaya sabitler */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Taşan kısımları gizler */
+    background-color: black; /* Kenarları doldurmak için */
+}
+
+.full-width-image img {
+    width: 100%; /* Genişlik oranını korur */
+    height: 100%; /* Yükseklik ekranın tamamını kaplar */
+    object-fit: none; /* Kırpma yapmaz */
+    object-position: top; /* Üst kısmı sabitler */
+}
+
+/* GRİD KISMI VİTRİN İLANI İÇİN*/
+.grid {
+    display: grid; /* Grid düzeni kullanıyoruz */
+    grid-template-columns: repeat(18, 1fr); /* 18 eşit sütun */
+    gap: 0.5rem; /* Sütunlar arasındaki boşluk */
+}
+
+.grid > div {
+    background-color: #ffffff; /* Başlık için arka plan rengi */
+    padding: 1rem; /* İçerik etrafında boşluk */
+    font-size: 1.25rem; /* Yazı boyutunu ayarlama */
+    font-weight: bold; /* Başlık yazısını kalın yapmak */
+    text-align: center; /* Yazıyı ortalamak */
+    grid-column: span 14; /* 14 sütun boyunca yayılacak şekilde ayarlama */
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(6, 1fr); /* Küçük ekranlarda daha az sütun */
+    }
+    .grid > div {
+        grid-column: span 6; /* Başlık tüm ekranı kapsayacak şekilde yayılır */
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr); /* Daha da küçük ekranlar için 4 sütun */
+    }
+    .grid > div {
+        grid-column: span 4; /* Başlık yine tüm ekranı kapsar */
+    }
+}
+
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 20px; /* Sol kenar ile 1 cm açıklık */
+    gap: 20px; /* Kartlar arasındaki boşluk */
+    margin-top: 20px; /* Üstteki ilan arama kısmı ile boşluk */
+}
+
+.card {
+    width: 18rem; /* Kart genişliği */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    border-radius: 8px; /* Köşeleri yuvarlama */
+}
+
+.card .card-header {
+    background-color: #dc3545; /* Danger rengi */
+    color: white; /* Yazı rengi beyaz */
+    font-weight: bold; /* Yazıyı vurgulamak için kalın */
+}
+ 
+
+/* İlanlar kısmı */
+/* Sayfa düzeni ve responsive ayarlar */
+.container-fluid {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.col-md-3 {
+    /* Sidebar'ın boyutları */
+    flex-basis: 25%;
+    max-width: 25%;
+}
+/* Sidebar içindeki kartlar arasında boşluk bırakma */
+.col-md-3 .card {
+    margin-bottom: 1rem; /* Kartlar arasına alt boşluk ekliyoruz */
+}
+
+/* Sidebar başlıklarına (card-header) alt boşluk ekleme */
+.col-md-3 .card-header {
+    margin-bottom: 1rem; /* Başlıkların altına boşluk ekliyoruz */
+}
+
+
+.col-md-9 {
+    /* Kartların yerleştirileceği alan */
+    flex-basis: 75%;
+    max-width: 75%;
+}
+
+.card-deck {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+@media (max-width: 768px) {
+    .card-deck {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-deck {
+        grid-template-columns: 1fr;
+    }
+}
+
+<!--Buton için özelleştirme-->
+
+.custom-button-container {
+    width: 100%; /* Kapsayıcı genişliği */
+}
+
+.custom-button {
+    display: block;
+    margin-left: auto; /* Sağ kenara yaslamak */
+    margin-right: 220px; /* Sağ kenar ile mesafe */
+    margin-top: 10px; /* Butonu aşağı kaydırmak için eklenen satır */
+    width: 970px; /* Buton genişliği */
+    padding: 10px 20px; /* İç boşluk */
+    font-size: 1.25rem; /* Yazı boyutu */
+    border-radius: 5px; /* Köşeleri yuvarlatma */
+}
