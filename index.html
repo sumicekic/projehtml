@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>KOMBİN ÖNER WEBSİTE</title>
+    <title>LeaSemera Outfit</title>
     <link rel="stylesheet" href="styles/style.css" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -17,9 +17,6 @@
   </head>
   <body>
     <!--Menü kısmı başlangıç-->
-
-    <padding-top :45px;></padding-top>
-
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="images/logo.png"
@@ -43,17 +40,32 @@
                 >Anasayfa</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kurumsal</a>
+            <!-- Kurumsal Dropdown Eklemesi -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="kurumsalDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Kurumsal
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="kurumsalDropdown">
+                <li><a class="dropdown-item" href="#">Hakkımızda</a></li>
+                <li><a class="dropdown-item" href="#">Misyonumuz</a></li>
+                <li><a class="dropdown-item" href="#">Vizyonumuz</a></li>
+              </ul>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Satılık İlanlar</a>
+              <a class="nav-link" href="#">Destek</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Kiralık İlanlar</a>
+              <a class="nav-link" href="#">Geribildirim</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projeler</a>
+              <a class="nav-link" href="#">Gizlilik Politikamız</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">İletişim</a>
@@ -66,6 +78,7 @@
         </div>
       </div>
     </nav>
+
     <!--menü kısmı bitiş-->
     <!--kapak kısmı başlangıç-->
     <div class="full-width-image">
@@ -73,7 +86,6 @@
     </div>
 
     <!--kapak kısmı bitiş-->
-
     <!--kategori kısmı başlangıç-->
     <div class="container mt-4">
       <div class="row">
@@ -93,12 +105,12 @@
         <!-- Kategori Seçimi -->
         <div class="col-md-3 col-12 mb-2">
           <div class="form-group">
-            <label for="kategori" class="form-label">Kategori</label>
-            <select class="form-select form-select-sm" id="kategori">
-              <option value="">Kategori Seçiniz</option>
-              <option value="konut">Konut İlanları</option>
-              <option value="arazi">Arazi İlanları</option>
-              <option value="ticari">Ticari İlanlar</option>
+            <label for="Cinsiyet" class="form-label">Cinsiyet Seçiniz.</label>
+            <select class="form-select form-select-sm" id="Cinsiyet">
+              <option value="">Cinsiyet Seçiniz</option>
+              <option value="Erkek">Erkek</option>
+              <option value="Kadın">Kadın</option>
+              <option value="Unisex">Unisex</option>
             </select>
           </div>
         </div>
@@ -106,9 +118,9 @@
         <!-- Alt Kategori Seçimi -->
         <div class="col-md-3 col-12 mb-2">
           <div class="form-group">
-            <label for="altKategori" class="form-label">Alt Kategori</label>
-            <select class="form-select form-select-sm" id="altKategori">
-              <option value="">Alt Kategori Seçiniz</option>
+            <label for="Tarzlar" class="form-label">Tarz Seçiniz.</label>
+            <select class="form-select form-select-sm" id="Tarzlar">
+              <option value="">Tarz seçiniz</option>
               <option value="satilik">Satılık</option>
               <option value="kiralik">Kiralık</option>
             </select>
@@ -120,14 +132,14 @@
           class="col-md-3 col-12 d-flex justify-content-md-end align-items-end mb-2"
         >
           <button type="button" class="btn btn-danger btn-sm w-100">
-            İlan Ara
+            Kıyafet veya Stil Aratın.
           </button>
         </div>
       </div>
     </div>
 
     <!--kategori kısmı bitiş-->
-
+    <hr class="border-secondary" />
     <!--İlan kısmı için grid başlangıç-->
     <div class="grid text-center" style="--bs-columns: 18; --bs-gap: 0.5rem">
       <div style="grid-column: span 14">VİTRİN İLANLARI</div>
@@ -140,27 +152,29 @@
         <!-- Sidebar -->
         <div class="col-md-3">
           <div class="card" style="width: 18rem">
-            <div class="card-header">Featured</div>
+            <div class="card-header">Cinsiyet</div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">Erkek</li>
+              <li class="list-group-item">Kadın</li>
+              <li class="list-group-item">Unisex</li>
             </ul>
           </div>
           <div class="card" style="width: 18rem">
-            <div class="card-header">Featured</div>
+            <div class="card-header">Tarzlar</div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">Modern</li>
+              <li class="list-group-item">Modest</li>
+              <li class="list-group-item">Tesettür</li>
             </ul>
           </div>
           <div class="card" style="width: 18rem">
-            <div class="card-header">Featured</div>
+            <div class="card-header">Kategoriler</div>
             <ul class="list-group list-group-flush">
-              <li class="list-group-item">An item</li>
-              <li class="list-group-item">A second item</li>
-              <li class="list-group-item">A third item</li>
+              <li class="list-group-item">Ceketler</li>
+              <li class="list-group-item">Gömlekler</li>
+              <li class="list-group-item">Pantolonlar</li>
+              <li class="list-group-item">Çantalar</li>
+              <li class="list-group-item">Aksesuarlar</li>
             </ul>
           </div>
         </div>
@@ -172,17 +186,15 @@
             <div class="card" style="width: 18rem">
               <img src="images/aaa.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text"></p>
-                <p style="color: red">15.000 TL</p>
+                <h5 class="card-title">Lüks Old-money vintage güneş gözlüğü</h5>
+                <p style="color: red">12.000 TL</p>
               </div>
             </div>
             <!-- Kart 2 -->
             <div class="card" style="width: 18rem">
               <img src="images/aaa.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">A</p>
+                <h5 class="card-title">Lüks Erkek Old-money Takım </h5>
                 <p style="color: red">15.000 TL</p>
               </div>
             </div>
@@ -190,9 +202,8 @@
             <div class="card" style="width: 18rem">
               <img src="images/aaa.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">aaa</p>
-                <p style="color: red">15.000 TL</p>
+                <h5 class="card-title">Kadın Lüks Kaban Bej</h5>
+                <p style="color: red">7.000 TL</p>
               </div>
             </div>
 
@@ -200,26 +211,24 @@
             <div class="card" style="width: 18rem">
               <img src="images/aaa.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">a</p>
-                <p style="color: red">15.000 TL</p>
+                <h5 class="card-title">Kadın Beyaz Gömlek & Ekoseli Pantolon Takım</h5>
+                <p style="color: red">10.000 TL</p>
               </div>
             </div>
             <!-- Kart 5 -->
             <div class="card" style="width: 18rem">
               <img src="images/aaa.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text"></p>
-                <p style="color: red">15.000 TL</p>
+                <h5 class="card-title">Erkek Ceket, Kazak, Pantolon Takım</h5>
+                 <p style="color: red">14.000 TL</p>
               </div>
             </div>
             <!-- Kart 6 -->
             <div class="card" style="width: 18rem">
               <img src="images/aaa.jpeg" class="card-img-top" alt="..." />
               <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">aa</p>
+                <h5 class="card-title">Beyaz Gömlek,Kemer,Bej Kumaş Pantolon Takım</h5>
+              
                 <p style="color: red">15.000 TL</p>
               </div>
             </div>
@@ -231,9 +240,53 @@
     <!--İlanlar ve sidebar kısmı bitiş-->
     <!--Tüm ilanlar için tıklayınız butonu giriş-->
     <div class="d-flex justify-content-end custom-button-container">
-        <button type="button" class="btn btn-danger custom-button">Tüm ilanlar için tıklayınız</button>
+      <button type="button" class="btn btn-danger custom-button">
+        Tüm ilanlar için tıklayınız
+      </button>
+    </div>
+
+    <!--tüm ilanlar için tıklayınız butonu bitiş-->
+    <hr class="border-secondary" />
+    <!--son kısım başlangıç-->
+    <div class="container mt-5">
+      <div class="row">
+        <!-- Hakkımızda kısmı -->
+        <div class="col-md-4">
+          <h5>Bizi Tanıyın!</h5>
+          <img src="images/logo.png" alt="Icon" class="img-fluid mb-2" />
+          <h6>Misyonumuz:</h6>
+          <p class="mission-vision-text">
+            Geçmişin zarafetini modern dokunuşlarla birleştirerek sektörde öncü
+            bir marka olmak.
+          </p>
+          <h6>Vizyonumuz:</h6>
+          <p class="mission-vision-text">
+            "Old money" tarzını yüksek kalite ve estetikle sunarak benzersiz bir
+            alışveriş deneyimi sağlamak.
+          </p>
+        </div>
+
+        <!-- Ürünler kısmı -->
+        <div class="col-md-4">
+          <h5>Hakkımızda</h5>
+          <ul class="list-group">
+            <li class="list-group-item">Destek</li>
+            <li class="list-group-item">Geribildirim ve Fiyat</li>
+            <li class="list-group-item">İletişim</li>
+            <li class="list-group-item">Kalite Standartlarımız</li>
+            <li class="list-group-item">Gizlilik Politikamız</li>
+          </ul>
+        </div>
+
+        <!-- İletişim kısmı -->
+        <div class="col-md-4">
+          <h2>Bize Ulaşın!</h2>
+          <p><b>Adres:</b> Sümer Mh. 1265 Sk. No:1 Tuzla/İstanbul</p>
+          <p><b>Tel:</b> 0216 555 555 55 55</p>
+          <p><b>E-Mail:</b> oldmoneyoutfits@gmail.com</p>
+        </div>
       </div>
-      
-     <!--tüm ilanlar için tıklayınız butonu bitiş-->
+    </div>
+    <!--son kısım bitiş-->
   </body>
 </html>
