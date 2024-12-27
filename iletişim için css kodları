@@ -1,0 +1,58 @@
+/* İletişim.html sayfası */
+/* Sayfa ve Navbar */
+body {
+    padding-top: 80px; /* Navbar'ın üst kısmı için padding */
+}
+
+  /* Sayfa Düzeni */
+  .container {
+    margin-top: 80px;
+  }
+  
+  /* Harita ve Formun genişliğini ayarlama */
+  .map-container {
+    height: 500px;
+    width: 50%;
+    float: left;
+  }
+  
+  .form-container {
+    height: 500px;
+    width: 50%;
+    float: left;
+    padding: 20px;
+  }
+  
+  .feedback-message {
+    margin-top: 10px;
+  }
+  
+  /* Form düzenlemesi */
+  .form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-container form .form-label {
+    font-weight: bold;
+  }
+  
+  .form-container form button {
+    margin-top: 20px;
+  }
+  
+  /* Success & Error Message */
+  .alert {
+    display: none;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative; /* Footer'ı sayfanın en altına yapıştırır */
+    width: 100%;
+  }
+  
+  
