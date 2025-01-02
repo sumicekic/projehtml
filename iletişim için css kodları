@@ -1,58 +1,112 @@
 /* İletişim.html sayfası */
 /* Sayfa ve Navbar */
 body {
-    padding-top: 80px; /* Navbar'ın üst kısmı için padding */
+  padding-top: 80px; /* Navbar'ın üst kısmı için padding */
 }
 
-  /* Sayfa Düzeni */
-  .container {
-    margin-top: 80px;
-  }
+/* Sayfa Düzeni */
+.container {
+  margin-top: 80px;
+}
+
+/*Bize ulaşın başlığı */
+.custom-title {
+  position: absolute; /* Serbest konumlandırma için absolute */
+  top: 100px; /* Yukarıdan uzaklık */
+  left: 110px; /* Soldan uzaklık */
+  font-size: 24px; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #343a40; /* Yazı rengi */
+  background-color: rgba(255, 255, 255, 0.8); /* Arka plan rengi (şeffaf beyaz) */
+  padding: 10px; /* İç boşluk */
+  border: 1px solid #ddd; /* Kenarlık */
+  border-radius: 5px; /* Köşeleri yuvarla */
+  z-index: 1000; /* Üstte görünmesi için z-index */
+}
+
+/* İletişim Formu ve Harita Düzenlemeleri */
+.map-container {
+  height: 300px; /* Haritanın dikey yüksekliği azaltıldı */
+  width: 48%; /* Genişlik ayarlandı */
+  margin-right: 2%; /* Sağ boşluk eklendi */
+  float: left;
+  background-color: #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*Bize ulaşın başlığı */
+.adres {
+  position: absolute; /* Serbest konumlandırma için absolute */
+  top: 500px; /* Yukarıdan uzaklık */
+  left: 110px; /* Soldan uzaklık */
+  font-size: 18px; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #343a40; /* Yazı rengi */
+  background-color: rgba(255, 255, 255, 0.8); /* Arka plan rengi (şeffaf beyaz) */
+  padding: 5px; /* İç boşluk */
+  border: 1px solid #ddd; /* Kenarlık */
+  border-radius: 5px; /* Köşeleri yuvarla */
   
-  /* Harita ve Formun genişliğini ayarlama */
-  .map-container {
-    height: 500px;
-    width: 50%;
-    float: left;
-  }
+}
+/*Bize ulaşın başlığı */
+.tel {
+  position: absolute; /* Serbest konumlandırma için absolute */
+  top: 540px; /* Yukarıdan uzaklık */
+  left: 110px; /* Soldan uzaklık */
+  font-size: 18px; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #343a40; /* Yazı rengi */
+  background-color: rgba(255, 255, 255, 0.8); /* Arka plan rengi (şeffaf beyaz) */
+  padding: 5px; /* İç boşluk */
+  border: 1px solid #ddd; /* Kenarlık */
+  border-radius: 5px; /* Köşeleri yuvarla */
   
-  .form-container {
-    height: 500px;
-    width: 50%;
-    float: left;
-    padding: 20px;
-  }
+}
+/*Bize ulaşın başlığı */
+.mail {
+  position: absolute; /* Serbest konumlandırma için absolute */
+  top: 580px; /* Yukarıdan uzaklık */
+  left: 110px; /* Soldan uzaklık */
+  font-size: 18px; /* Yazı boyutu */
+  font-weight: bold; /* Kalın yazı */
+  color: #343a40; /* Yazı rengi */
+  background-color: rgba(255, 255, 255, 0.8); /* Arka plan rengi (şeffaf beyaz) */
+  padding: 5px; /* İç boşluk */
+  border: 1px solid #ddd; /* Kenarlık */
+  border-radius: 5px; /* Köşeleri yuvarla */
   
-  .feedback-message {
-    margin-top: 10px;
-  }
-  
-  /* Form düzenlemesi */
-  .form-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form-container form .form-label {
-    font-weight: bold;
-  }
-  
-  .form-container form button {
-    margin-top: 20px;
-  }
-  
-  /* Success & Error Message */
-  .alert {
-    display: none;
-  }
-  
-  footer {
-    background-color: #343a40;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    position: relative; /* Footer'ı sayfanın en altına yapıştırır */
-    width: 100%;
-  }
-  
-  
+}
+
+
+
+.form-container {
+  width: 48%; /* Formun genişliği ayarlandı */
+  float: right;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Alert Mesajı Konumlandırma */
+.alert {
+  margin-top: 20px;
+  margin-bottom: 40px; /* Footer ile arasında boşluk eklendi */
+}
+
+/* Footer Üstüne Genel Boşluk */
+footer {
+  margin-top: 40px; /* Footer'ın üstüne boşluk */
+  text-align: center;
+  background-color: #343a40;
+  color: white;
+  padding: 10px 0;
+}
+
+/* Harita ve Form Arasındaki Boşluk */
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px; /* Harita ve Formun altına boşluk */
+}
